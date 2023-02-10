@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:moovbe_test_project/driverList/driverList.dart';
 
 class AddDriver extends StatelessWidget {
   AddDriver({super.key});
@@ -22,7 +23,7 @@ class AddDriver extends StatelessWidget {
           ),
         ),
       ),
-      body: SingleChildScrollView (
+      body: SingleChildScrollView(
         child: Column(
           children: [
             addDriver(nameController, 'Enter Name'),
@@ -35,11 +36,11 @@ class AddDriver extends StatelessWidget {
               child: SizedBox(
                 height: 64,
                 child: GestureDetector(
-                  // onTap: () => Navigator.pushReplacement(
-                  //     context,
-                  //     MaterialPageRoute<dynamic>(
-                  //       builder: (context) => AddDriver(),
-                  //     )),
+                  onTap: () => Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute<dynamic>(
+                        builder: (context) => DriverList(),
+                      )),
                   child: Card(
                     shadowColor: Colors.redAccent,
                     elevation: 0,
@@ -91,7 +92,6 @@ class AddDriver extends StatelessWidget {
       child: TextFormField(
         controller: controller,
         textAlign: TextAlign.center,
-        keyboardType: TextInputType.number,
         decoration: InputDecoration(
           fillColor: const Color.fromARGB(255, 232, 226, 226),
           filled: true,

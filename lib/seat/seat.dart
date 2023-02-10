@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:moovbe_test_project/seat/widgets/seating.dart';
 import 'package:get/get.dart';
 
@@ -69,23 +70,26 @@ class Seat extends StatelessWidget {
           ),
         ),
         Container(
-          margin: const EdgeInsets.only(left: 60, right: 60, top: 80),
+          margin: EdgeInsets.only(left: 60.r, right: 60.r, top: 80.r),
           width: double.infinity,
           decoration: BoxDecoration(
               border: Border.all(), borderRadius: BorderRadius.circular(10)),
           child: Column(
             children: [
-              const Padding(
-                padding: EdgeInsets.only(left: 160, top: 10),
+              Padding(
+                padding: EdgeInsets.only(left: 160.r, top: 10.r),
                 child: Icon(
                   Icons.chair,
                   color: Color.fromRGBO(0, 0, 0, 1),
-                  size: 30,
+                  size: 30.sp,
                 ),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  // SizedBox(
+                  //   width: 20,
+                  // ),
                   Column(
                     children: const [
                       BusSetIcon(),
@@ -98,8 +102,8 @@ class Seat extends StatelessWidget {
                       BusSetIcon(),
                     ],
                   ),
-                  const SizedBox(
-                    width: 30,
+                  SizedBox(
+                    width: 30.w,
                   ),
                   Column(
                     children: const [

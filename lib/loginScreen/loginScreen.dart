@@ -104,7 +104,6 @@ class LoginScreen extends StatelessWidget {
       child: TextFormField(
         controller: controller,
         textAlign: TextAlign.center,
-        keyboardType: TextInputType.number,
         decoration: InputDecoration(
           fillColor: const Color.fromARGB(255, 232, 226, 226),
           filled: true,
